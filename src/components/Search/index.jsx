@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useContext } from "react";
 import { IoIosSearch } from "react-icons/io";
 import { IoIosClose } from "react-icons/io";
 
 import styles from "./Search.module.scss";
+import { SearchContext } from "../../App";
 
-const index = ({ searchValue, setSearchValue }) => {
+const Search = () => {
+  const { searchValue, setSearchValue } = useContext(SearchContext);
   return (
     <>
       <div className={styles.root}>
@@ -26,4 +28,4 @@ const index = ({ searchValue, setSearchValue }) => {
   );
 };
 
-export default index;
+export default Search;
